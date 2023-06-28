@@ -11,3 +11,10 @@ install:
 
 script:
 - pyinstaller --onefile filtWA.py --noconsole --windowed --clean --add-data="wa.png:img" -n Filter_BOTC --target-arch=universal2
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/
+  on:
+    branch: master
