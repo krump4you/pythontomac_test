@@ -10,4 +10,4 @@ install:
   - pip install pyinstaller
 
 script:
-  - pyinstaller --onefile filtWA.py
+- pyinstaller --onefile filtWA.py --noconsole --windowed --clean --add-data="wa.png:img" -n Filter_BOTC --target-arch=universal2
